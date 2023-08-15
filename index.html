@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Group Hug Party</title>
+    <style>
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes glitter {
+            0% { text-shadow: 2px 2px #FFD700; }
+            25% { text-shadow: -2px -2px #FFD700; }
+            50% { text-shadow: -2px 2px #FFD700; }
+            75% { text-shadow: 2px -2px #FFD700; }
+            100% { text-shadow: 2px 2px #FFD700; }
+        }
+
+        @keyframes swing {
+            0% { transform: rotate(-10deg); }
+            50% { transform: rotate(10deg); }
+            100% { transform: rotate(-10deg); }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+            background: url('https://www.shutterstock.com/image-vector/two-friends-embracing-neon-sign-260nw-1477898204.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+
+        .disco-ball {
+            width: 150px;
+            height: 150px;
+            margin: 50px auto;
+            background: url('https://img.freepik.com/free-vector/party-neon-sign_540545-36.jpg') no-repeat center;
+            background-size: cover;
+            animation: rotate 5s infinite linear;
+        }
+
+        .message {
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            animation: glitter 1s infinite, swing 5s infinite;
+            transform-origin: top center;
+        }
+
+        .party-text {
+            font-size: 36px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <div class="disco-ball"></div>
+    <div class="message">
+        Virtual Group Hug for<br>
+        Joseph, Kamakshi, Mukesh,<br>
+        Dr. Sanjay, and Amir! 🎉<br>
+        <span class="party-text">Congratulations!</span>
+    </div>
+</body>
+</html>
